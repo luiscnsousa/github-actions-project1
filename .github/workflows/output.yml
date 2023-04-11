@@ -1,0 +1,8 @@
+name: Project 1 Output
+on: issues
+jobs:
+  output:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Output issue metadata
+        run: echo "${{ toJSON(github.event.issue) }}"
